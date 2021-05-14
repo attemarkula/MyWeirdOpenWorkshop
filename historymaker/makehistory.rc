@@ -1,0 +1,9 @@
+#use case: Lecturer uses bash to issue commands. This script helps to near realtime log and display commands on another terminal.
+#change hist file location
+export HISTFILE=/home/$USER/.bash_history_logger
+
+# set shell option for history append
+shopt -s histappend
+# use history command to append new command to history file and run it
+
+PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
